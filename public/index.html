@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>C4t G4M3</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+
+      <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css">
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+      <link rel="stylesheet" type="text/css" href="PracForms.css">
+
+    <script src = "phaser.js"></script>
+    <script src = "Boot.js"></script>
+
+    <script src = "Preloader.js"></script>
+    <script src = "MainMenu.js"></script>
+    <script src = "Level1.js"></script>
+    <script src = "Level22.js"></script>
+    <script src = "Level3.js"></script>
+    <script src = "Level4.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+
+    <title>SC-KITTY</title>
+
+
+  </head>
+  <body>
+
+
+
+
+    <div class="jumbotron">
+        <h1 id="kittyTitle">SPACE COMMANDER KITTY</h1>
+        <p id="descript">Space cunning, Mexican food, and enemy Mojitos</p>
+        <p><a class="btn btn-primary btn-lg" id="btnStart">PLAY SPACE COMMANDER KITTY</a></p>
+      </div>
+
+    <div id="flexContain">
+      <div id="images"></div>
+    </div>
+
+
+<script src="redditCaller.js"></script>
+
+
+      <script type="text/javascript">
+        $("#btnStart").click(function() {
+
+          setInterval(function(){$(document).scrollTop($(document).height())}, 150)
+
+
+
+          var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.CANVAS, "")
+
+          game.state.add("Boot", Game.Boot)
+          game.state.add("Preloader", Game.Preloader)
+          // game.state.add("MainMenu", Game.MainMenu)
+          game.state.add("Level1", Game.Level1)
+          // game.state.add("Level2", Game.Level2)
+          game.state.add("Level3", Game.Level3)
+          game.state.add("Level4", Game.Level4)
+          game.state.add("Level22", Game.Level2)
+
+
+          // game.physics.startSystem(Phaser.Physics.ARCADE);
+          // game.world.enableBody = true;
+
+
+
+          game.state.start("Boot")
+
+        })
+        </script>
+
+        <script>
+        $(document).scrollTop($(document).height());
+        </script>
+
+
+  </body>
+</html>
